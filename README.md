@@ -6,7 +6,7 @@
 ## Структура
 - `index.html` — разметка страницы;
 - `css/style.css` — стили;
-- `img/background.jpg` — фон (город в облаках).
+- `img/background.jpg` — фон.
 
 ## Запуск
 1. Склонируйте репозиторий: `git clone <ссылка>`
