@@ -1,0 +1,262 @@
+/* =============================================
+   СБРОС СТАНДАРТНЫХ СТИЛЕЙ БРАУЗЕРА (RESET)
+   ============================================= */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+/* =============================================
+   СТИЛИЗАЦИЯ BODY И ФОНОВОГО ИЗОБРАЖЕНИЯ
+   ============================================= */
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+
+/* Полупрозрачный оверлей поверх фона */
+.login-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+
+/* =============================================
+   ОБЁРТКА ФОРМЫ (КОНТЕЙНЕР)
+   ============================================= */
+.login-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 420px;
+    padding: 20px;
+}
+
+.login-form-wrapper {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    padding: 40px 35px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* =============================================
+   ЛОГОТИП
+   ============================================= */
+.logo {
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width: 140px;
+    height: auto;
+}
+
+
+/* =============================================
+   ЗАГОЛОВОК ФОРМЫ
+   ============================================= */
+.form-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+
+/* =============================================
+   СТИЛИЗАЦИЯ ФОРМЫ И ЭЛЕМЕНТОВ
+   ============================================= */
+.login-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #444;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input::placeholder {
+    color: #aaa;
+}
+
+.form-group input:focus {
+    border-color: #4a6cf7;
+    box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.15);
+    background-color: #fff;
+}
+
+
+/* =============================================
+   ОПЦИИ ФОРМЫ (ЧЕКБОКС И ССЫЛКА)
+   ============================================= */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #4a6cf7;
+    cursor: pointer;
+}
+
+.forgot-link {
+    font-size: 14px;
+    color: #4a6cf7;
+    transition: color 0.3s ease;
+}
+
+.forgot-link:hover {
+    color: #2a4cd7;
+    text-decoration: underline;
+}
+
+
+/* =============================================
+   КНОПКА ОТПРАВКИ
+   ============================================= */
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    background-color: #4a6cf7;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    margin-top: 5px;
+}
+
+.btn-submit:hover {
+    background-color: #3a5ce5;
+    box-shadow: 0 6px 20px rgba(74, 108, 247, 0.4);
+    transform: translateY(-1px);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(74, 108, 247, 0.3);
+}
+
+
+/* =============================================
+   ССЫЛКА НА РЕГИСТРАЦИЮ
+   ============================================= */
+.signup-link {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+}
+
+.signup-link a {
+    color: #4a6cf7;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.signup-link a:hover {
+    color: #2a4cd7;
+    text-decoration: underline;
+}
